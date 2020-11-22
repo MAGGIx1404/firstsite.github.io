@@ -1,0 +1,598 @@
+@import url("https://fonts..com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ************************************** */
+
+/* ************************************** */
+/* Utilities classes*/
+
+.container {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* ************************************** */
+
+header {
+  height: 90vh;
+  padding-top: 3rem;
+}
+
+header nav {
+  align-items: center;
+  position: relative;
+}
+
+header nav.navbar .icon-tray i {
+  font-size: 4rem;
+  margin-right: 1.5rem;
+  color: red;
+}
+
+header nav.navbar .icon-tray h2 {
+  font-size: 3rem;
+  text-decoration: underline dotted;
+}
+
+header nav.navbar .show-area a {
+  color: #000;
+  font-size: 2.5rem;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+header nav.navbar .show-area a::after {
+  content: " ";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: red;
+  transition: width 0.2s ease;
+}
+
+header nav.navbar .show-area a:hover {
+  color: red;
+}
+
+header nav.navbar .show-area a:hover::after {
+  width: 100%;
+}
+
+header nav.navbar .show-area :first-child {
+  margin-right: 1.2rem;
+}
+
+header nav .hamburger-icon {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  display: none;
+}
+
+header nav .hamburger-icon a i {
+  font-size: 3rem;
+}
+
+/* subject section */
+.subject {
+  display: flex;
+  position: relative;
+  top: 10%;
+}
+
+.subject .left {
+  flex-basis: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subject .left .intro h1 {
+  font-size: 5rem;
+}
+
+.subject .left h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.subject .pic {
+  flex-basis: 1;
+}
+
+.subject .pic img {
+  max-width: 100%;
+  height: auto;
+}
+
+.subject .social-icons i {
+  font-size: 4rem;
+}
+
+.subject .social-icons a:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.subject .social-icons a {
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.subject .social-icons a:hover {
+  color: red;
+}
+
+.subject .cat img {
+  width: 40%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* profile section */
+
+.contant {
+  display: flex;
+  margin-bottom: 10rem;
+}
+
+.contant .profile {
+  flex: 2;
+}
+.contant .profile img {
+  max-width: 100%;
+  height: auto;
+}
+.contant .selfcon {
+  flex: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contant .selfcon .title h2 i {
+  font-size: 4rem;
+  color: red;
+}
+
+.contant .selfcon h2 {
+  font-size: 5rem;
+  margin-top: 5rem;
+}
+.contant .selfcon span {
+  color: red;
+  position: relative;
+}
+
+.contant .selfcon span::after {
+  content: " ";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: red;
+  transition: width 0.2s ease;
+}
+
+.contant .selfcon span:hover::after {
+  width: 100%;
+}
+
+.contant .selfcon .photo {
+  width: 100%;
+}
+
+.contant .selfcon p {
+  font-size: 3rem;
+  margin-top: 5rem;
+  margin-left: 10rem;
+  width: 80%;
+}
+.contant .selfcon img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 16.5rem;
+}
+.top-heading h1 {
+  font-size: 5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.skills {
+  /* height: 500px; */
+  border-radius: 15px;
+  margin-bottom: 5rem;
+  padding: 10px;
+}
+
+.skills h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.skills h4 {
+  font-size: 4rem;
+  color: #fff;
+  line-height: 300px;
+  text-align: center;
+}
+
+.skills .card-box-1 {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.skills .card-box-2 {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.skills .cards {
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  margin-right: 2rem;
+  margin-bottom: 15px;
+  transition: all .3s ease;
+  box-shadow: 0 10px 6px -6px #777;;
+}
+
+.skills .cards.c1 {
+  background-color: #fdcfdf;
+}
+
+.skills .cards.c2 {
+  background-color: #e8e8e8;
+}
+
+.skills .cards.c3  {
+  background-color: #ee6f57;
+}
+
+.skills .cards.c4 {
+  background-color: #9ad3bc;
+}
+
+.skills .cards.c5 {
+  background-color: #fcf876;
+}
+
+.skills .cards.c6 {
+  background-color: #b8de6f;
+}
+
+.skills .cards:hover {
+  transform: scale(1.09);
+}
+
+footer {
+  padding: 5rem 0;
+  background-color: #bedbbb81;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 10rem; */
+}
+
+footer > .end {
+  width: 50%;
+  text-align: center;
+}
+
+footer > .end h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+footer > .end p {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.footer-icons {
+  text-align: center;
+}
+
+.footer-icons a i {
+  font-size: 3rem;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: red;
+}
+
+.footer-icons a:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+@media (max-width: 1600px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .contant .selfcon img {
+    display: none;
+  }
+
+  .subject {
+    position: relative;
+    top: 25%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+  
+
+  nav .show-area {
+    display: none;
+  }
+
+  header nav .hamburger-icon {
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+  }
+
+  .subject {
+    margin-top: 10rem;
+    top: 15%;
+  }
+
+  .contant .selfcon h2 {
+    margin-top: 0;
+    font-size: 4rem;
+  }
+
+  .contant .selfcon p {
+    font-size: 2rem;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
+}
+
+
+@media (max-width: 990px) {
+  .container {
+    max-width: 800px;
+  }
+
+  header {
+    height: 70vh;
+  }
+
+  .skills .cards {
+    margin: 0;
+  }
+
+  .skills .card-box-1 .c1 {
+    margin-right: 1.5rem;
+  }
+
+  .skills .card-box-1 .c3 {
+    margin-top: 2rem;
+  }
+
+  .skills .card-box-2 .c4 {
+    margin-right: 1.5rem;
+  }
+
+  .skills .card-box-2 .c6 {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width:800px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .skills .cards {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+
+  header {
+    height: 70vh;
+  }
+
+  .subject .pic {
+    height: 0px;
+    width: 0px;
+  }
+
+  nav .icon-tray {
+    margin-left: 2rem;
+  }
+
+  .contant {
+    display: block;
+    position: relative;
+  }
+
+  .contant .profile {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .skills .card-box-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills .cards {
+    width: 80%;
+  }
+
+  .skills .card-box-1 .c1 {
+    margin-right: 0;
+  }
+
+  .skills .card-box-1 .c3 {
+    margin-top: 0;
+  }
+
+  .skills .card-box-2 .c4 {
+    margin-right: 0;
+  }
+
+  .skills .card-box-2 .c6 {
+    margin-top: 0;
+  }
+
+  .skills .card-box-2 {
+    flex-direction: column;
+    align-items: center;
+  } 
+
+  footer > .end {
+    width: 70%;
+  } 
+}
+
+
+@media (max-width: 430px) {
+  header {
+    height: 80vh;
+  }
+
+  .contant .selfcon {
+    margin-top: 1.5rem;
+  }
+
+  footer > .end {
+    width: 100%;
+    padding: 5px;
+  } 
+}
+
+
+@media (max-width: 320px) {
+  header {
+    height: 90vh;
+  }
+
+  .contant .selfcon :nth-child(2) p {
+    width: 100%;
+  }
+
+  .contant {
+    margin-bottom: 1.8rem;
+  }
+
+  .skills .cards {
+    width: 80%;
+    height: 130px;
+  }
+
+  .skills h4 {
+    font-size: 3rem;
+    line-height: 130px;
+  }
+
+  footer > .end p {
+    font-size: 2rem;
+  }
+}
