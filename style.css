@@ -431,7 +431,6 @@ footer > .end p {
   }
 
   .subject {
-    margin-top: 10rem;
     top: 15%;
   }
 
@@ -515,6 +514,7 @@ footer > .end p {
   .contant .profile {
     width: 50%;
     margin: 0 auto;
+    margin-bottom: 1.2rem;
   }
 
   .skills .card-box-1 {
